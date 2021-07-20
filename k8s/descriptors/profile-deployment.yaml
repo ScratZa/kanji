@@ -1,0 +1,28 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: profile
+  labels:
+    service: profile
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      service: profile
+  template:
+    metadata:
+      labels:
+        service: profile
+    spec:
+      containers:
+      - name: profile
+        image: vincenzoza1/profile:latest
+        ports:
+        - containerPort: 80
+        resources:
+          limits:
+            cpu: 200m
+            memory: 200Mi
+          requests:
+            cpu: 100m
+            memory: 100Mi
