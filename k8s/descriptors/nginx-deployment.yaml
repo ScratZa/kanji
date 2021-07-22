@@ -2,21 +2,21 @@ apiVersion: apps/v1
 kind: Deployment
 metadata:
   namespace: default
-  name: profile
+  name: web
   labels:
-    app: profile
+    app: web
 spec:
   replicas: 1
   selector:
     matchLabels:
-      app: profile
+      app: web
   template:
     metadata:
       labels:
-        app: profile
+        app: web
     spec:
       containers:
-      - name: profile
-        image: vincenzoza1/profile:latest
+      - name: nginx
+        image: nginx
         ports:
         - containerPort: 80

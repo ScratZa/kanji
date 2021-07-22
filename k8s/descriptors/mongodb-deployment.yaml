@@ -2,17 +2,18 @@ apiVersion: apps/v1
 kind: Deployment
 metadata:
   name: mongodb
+  namespace: default
   labels:
-    service: mongodb
+    app: mongodb
 spec:
   replicas: 1
   selector:
     matchLabels:
-      service: mongodb
+      app: mongodb
   template:
     metadata:
       labels:
-        service: mongodb
+        app: mongodb
     spec:
       containers:
       - name: mongodb

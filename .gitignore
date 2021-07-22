@@ -354,3 +354,5 @@ MigrationBackup/
 *.lock.hcl
 *.lock.info
 *.tfstate
+*/private_ssh_key
+*/terraform.tfstate.backup
