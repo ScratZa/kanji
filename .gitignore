@@ -351,6 +351,7 @@ MigrationBackup/
 
 #Terraform 
 */.terraform
+*.terraform
 *.lock.hcl
 *.lock.info
 *.tfstate
